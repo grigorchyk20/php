@@ -1,0 +1,9 @@
+FROM php:7.3-fpm
+
+RUN apt-get update && apt-get install -y libpq-dev
+
+COPY ./php/default.ini /usr/local/etc/php/conf.d/default.ini
+
+RUN apt-get update && apt-get install -y libpq-dev
+
+WORKDIR /app
